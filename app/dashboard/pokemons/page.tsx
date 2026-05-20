@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cacheTag, revalidateTag } from "next/cache";
 
 import { PokemonGrid, PokemonResponse, SimplePokemon } from "@/components/pokemons";
 
@@ -20,6 +21,10 @@ const getPokemons = async (limit = 20, offset = 0): Promise<SimplePokemon[]> => 
 }
 
 export default async function PokemonsPage() {
+    // 'use cache';
+
+    // cacheTag('pokemon-list');
+    // revalidateTag('pokemon-list', 'max');
 
     const pokemons = await getPokemons(151);
 
