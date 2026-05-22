@@ -1,3 +1,5 @@
+import { IoCafeOutline } from "react-icons/io5"
+;
 import { SimpleWidget } from "@/components";
 
 export const metadata = {
@@ -12,7 +14,13 @@ export default function MainPage() {
             <span className="text-xl mt-4">Información general</span>
 
             <div className="flex flex-wrap p-2 items-center justify-center">
-                <SimpleWidget />
+                <SimpleWidget
+                    title="Contador"
+                    subtitle="Contador agregado"
+                    label="Contador"
+                    icon={<IoCafeOutline size={50} className="text-blue-500" />}
+                    href="/dashboard/counter"
+                />
             </div>
         </div>
     )
